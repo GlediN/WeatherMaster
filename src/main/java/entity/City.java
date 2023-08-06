@@ -2,6 +2,7 @@ package entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
@@ -11,9 +12,12 @@ import java.util.List;
 @Setter
 public class City {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int city_id;
     private String city_name;
+
+
+
     private String country_name;
 
     private int default_city;
@@ -23,4 +27,7 @@ public class City {
     public City(String city_name) {
         this.city_name = city_name;
     }
+
+
+
 }
