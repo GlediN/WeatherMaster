@@ -14,6 +14,8 @@ public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int city_id;
+
+    @Column(unique = true)
     private String city_name;
 
 
