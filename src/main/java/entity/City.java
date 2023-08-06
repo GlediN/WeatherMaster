@@ -20,6 +20,7 @@ public class City {
     @OneToMany(mappedBy = "city_id")
     private List<Weather> weathers;
 
-
-
+    public City(String city_name) {
+        this.city_name = city_name;
+    }
 }
