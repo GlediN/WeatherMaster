@@ -12,12 +12,23 @@ public class Main {
         City city2 = new City("Shkoder");
 
       SessionFactory sessionFactory = new HibernateUtil().getSessionFactory();
-        Session session= sessionFactory.openSession();
-        Transaction transaction=session.beginTransaction();
+      Transaction transaction = null;
 
-session.persist(city1);
-session.persist(city2);
-transaction.commit();
+      try(Session session = sessionFactory.openSession()){
+          transaction = session.beginTransaction();
+
+          session.persist(city1);
+          session.persist(city2);
+          transaction.commit();
+      }  catch (Exception e){
+          if(transaction != null){
+              transaction.rollback();
+          }
+      }
+
+
+
+
 
 
 
