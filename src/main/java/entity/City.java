@@ -17,7 +17,6 @@ public class City {
     private String city_name;
 
 
-
     private String country_name;
 
     private int default_city;
@@ -27,7 +26,6 @@ public class City {
     public City(String city_name) {
         this.city_name = city_name;
     }
-
 
 
 }
