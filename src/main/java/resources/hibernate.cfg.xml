@@ -8,7 +8,8 @@
         <property name="connection.username">root</property>
         <property name="connection.password">gledi</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="Qyteti"/>
-        <mapping class="Moti"/>
+        <mapping class="entity.City"/>
+        <mapping class="entity.Weather"/>
+        <mapping class="entity.Main"/>
     </session-factory>
 </hibernate-configuration>
