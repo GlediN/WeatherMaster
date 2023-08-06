@@ -1,14 +1,30 @@
 package entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDate;
 
 @Entity
+@Getter
+@Setter
 public class Weather {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int weather_
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false)
+    private int weather_id;
+    private LocalDate date_received_info;
+    private Double temp;
+    private Double temp_min;
+    private Double temp_max;
+    private Double humidity_level;
+    private Double wind_speed;
+    private Double atmospheric_pressure;
+    private LocalDate date_for_info;
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city_id;
 
 }
