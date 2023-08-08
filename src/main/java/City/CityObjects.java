@@ -1,4 +1,6 @@
-package entity;
+package City;
+
+import City.City;
 
 public class CityObjects {
     City city1 = new City("Tirane");

@@ -1,8 +1,8 @@
-package entity;
+package Weather;
 
+import City.City;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;

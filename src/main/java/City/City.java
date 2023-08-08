@@ -1,8 +1,8 @@
-package entity;
+package City;
 
+import Weather.Weather;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
